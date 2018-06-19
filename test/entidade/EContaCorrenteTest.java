@@ -49,7 +49,7 @@ public class EContaCorrenteTest {
     public void testSacarSaldoInsuficiente(){
         System.out.println("Testando caso de testes 04");
         EContaCorrente instance = new EContaCorrente(null);
-        Double expResult = null;
+        Double expResult = 0.0;
         Double result = instance.getSaldoAtual();
         assertEquals(expResult, result);
         fail("Era esperado um erro que nao aconteceu");
