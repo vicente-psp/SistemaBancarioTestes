@@ -27,15 +27,15 @@ public class NHistoricoMovimentacaoTest {
     public void testRegistrar() {
         System.out.println("registrar");
         EContaCorrente conta = new EContaCorrente();
-        String descircao = "";
+        String descricao = "";
         
-        persistencia = Mockito.mock(PHistoricoMovimentacao.class, descircao);
+        persistencia = Mockito.mock(PHistoricoMovimentacao.class, descricao);
         NHistoricoMovimentacao instance = new NHistoricoMovimentacao(persistencia);
         
-        when(persistencia.registrar(conta, descircao)).thenReturn(true);
+        when(persistencia.registrar(conta, descricao)).thenReturn(true);
         
         boolean expResult = true;
-        boolean result = instance.registrar(conta, descircao);
+        boolean result = instance.registrar(conta, descricao);
         assertEquals(expResult, result);
     }
     

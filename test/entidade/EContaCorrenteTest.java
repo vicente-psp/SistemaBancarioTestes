@@ -26,13 +26,33 @@ public class EContaCorrenteTest {
     
     @Test(expected = IllegalArgumentException.class)
     public void testSaldoInicialNulo(){
-        System.out.println("Testando caso de testes 01");
+        System.out.println("Testando caso de testes 02");
         EContaCorrente instance = new EContaCorrente(null);
         Double expResult = null;
         Double result = instance.getSaldoAtual();
         assertEquals(expResult, result); 
         fail("Era esperado um erro que nao aconteceu");
     }
-
+    
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testSacarNulo(){
+        System.out.println("Testando caso de testes 03");
+        EContaCorrente instance = new EContaCorrente(null);
+        Double expResult = null;
+        Double result = instance.getSaldoAtual();
+        assertEquals(expResult, result); 
+        fail("Era esperado um erro que nao aconteceu");
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testSacarSaldoInsuficiente(){
+        System.out.println("Testando caso de testes 04");
+        EContaCorrente instance = new EContaCorrente(null);
+        Double expResult = null;
+        Double result = instance.getSaldoAtual();
+        assertEquals(expResult, result);
+        fail("Era esperado um erro que nao aconteceu");
+    }
     
 }
