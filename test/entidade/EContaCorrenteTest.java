@@ -2,6 +2,7 @@ package entidade;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
@@ -9,18 +10,18 @@ import static org.junit.Assert.*;
  */
 public class EContaCorrenteTest {
     
-    public EContaCorrenteTest() {
+    private EContaCorrente contaCorrente;
+    
+    @Before
+    public void setUp()throws Exception{
+        contaCorrente = new EContaCorrente();
     }
-
-    /**
-     * Test of getSaldoAtual method, of class EContaCorrente.
-     */
+    
     @Test
     public void testGetSaldoAtual() {
         System.out.println("Testando caso de testes 01");
-        EContaCorrente instance = new EContaCorrente();
         Double expResult = 0.0;
-        Double result = instance.getSaldoAtual();
+        Double result = contaCorrente.getSaldoAtual();
         assertEquals(expResult, result);
     }
     
