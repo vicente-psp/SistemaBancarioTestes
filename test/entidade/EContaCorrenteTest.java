@@ -54,6 +54,16 @@ public class EContaCorrenteTest {
         Double result = instance.getSaldoAtual();
         assertEquals(expResult, result);
         fail("Era esperado um erro que nao aconteceu");
+    } 
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testGit(){
+        System.out.println("Testando sincronização com git");
+        EContaCorrente instance = new EContaCorrente(null);
+        Double expResult = 0.0;
+        Double result = instance.getSaldoAtual();
+        assertEquals(expResult, result);
+        fail("Era esperado um erro que nao aconteceu");
     }
     
 }
