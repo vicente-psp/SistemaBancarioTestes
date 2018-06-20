@@ -12,9 +12,8 @@ public class EContaCorrente {
     }
     
     public EContaCorrente(Double saldo) {
-        if(saldo == 10.0)
-            throw new IllegalArgumentException(
-            "Não e permitido o saldo inicial nulo");
+        if(saldo < 0)
+            throw new IllegalArgumentException("Não é permitido o saldo inicial negativo");
         this.saldoAtual = saldo;
     }
 
