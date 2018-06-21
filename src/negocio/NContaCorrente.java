@@ -8,13 +8,11 @@ import entidade.EContaCorrente;
  */
 public class NContaCorrente {
     
-    public void depositar(EContaCorrente conta, Double valor) throws Exception{
+    public void depositar(EContaCorrente conta, float valor) throws Exception{
         conta.setSaldo(conta.getSaldo() + valor);
     }
     
-    public void sacar(EContaCorrente conta, Double valor)throws Exception{
-        if(valor == null)
-            throw new Exception("Valor inválido.");
+    public void sacar(EContaCorrente conta, float valor)throws Exception{
         if(valor <= 0)
             throw new Exception("Valor deve ser maior que zero.");
         if(conta.getSaldo() < valor)

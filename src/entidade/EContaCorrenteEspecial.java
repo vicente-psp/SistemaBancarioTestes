@@ -12,7 +12,8 @@ public class EContaCorrenteEspecial extends EContaCorrente {
     }
 
     public EContaCorrenteEspecial(Double limite, String agencia, String conta, String cliente, Double saldo) {
-        super(agencia, conta, cliente, saldo);
+//        super(agencia, conta, cliente, saldo);
+    	
         this.limite = limite;
     }
 

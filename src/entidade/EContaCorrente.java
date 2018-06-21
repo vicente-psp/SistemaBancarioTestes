@@ -8,16 +8,16 @@ public class EContaCorrente {
     private String agencia;
     private String conta;
     private String cliente;
-    private Double saldo;
+    private float saldo;
 
-    public EContaCorrente() {}
+//    public EContaCorrente() {}
 
-    public EContaCorrente(String agencia, String conta, String cliente, Double saldo) {
-        this.agencia = agencia;
-        this.conta = conta;
-        this.cliente = cliente;
-        this.saldo = saldo;
-    }
+//    public EContaCorrente(String agencia, String conta, String cliente, float saldo) {
+//        this.agencia = agencia;
+//        this.conta = conta;
+//        this.cliente = cliente;
+//        this.saldo = saldo;
+//    }
 
     public String getAgencia() {
         return agencia;
@@ -49,11 +49,11 @@ public class EContaCorrente {
         this.cliente = cliente;
     }
 
-    public Double getSaldo() {
+    public float getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(Double saldo) throws Exception {
+    public void setSaldo(float saldo) throws Exception {
         if(saldo < 0)
             throw new Exception("Saldo não pode ser negativo");
         this.saldo = saldo;
